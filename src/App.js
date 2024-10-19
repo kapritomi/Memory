@@ -113,10 +113,10 @@ function App() {
       <div className="grid grid-cols-4 gap-4 p-4">
         {final.map((item, index) => 
           (item.matched ? // Check for matched cards
-          <div key={item.id} className="bg-white text-black rounded w-[200px] h-[200px] text-[44px] flex items-center justify-center"></div> :
+          <div key={item.id} className="bg-white text-black rounded w-[200px] h-[200px] mobile:w-[50px] mobile:h-[50px] mobile:text-[13px]  text-[44px] flex items-center justify-center"></div> :
           (item.flipped ? 
-          <div key={item.id} className="bg-blue-500 text-white rounded w-[200px] h-[200px] text-[44px] flex items-center justify-center" onClick={() => flip(index)}>{item.card}</div> :
-          <div key={item.id} className="bg-blue-500 text-white rounded w-[200px] h-[200px]" onClick={() => flip(index)}></div>))
+          <div key={item.id} className="bg-blue-500 text-white rounded w-[200px] h-[200px] mobile:w-[50px] mobile:h-[50px] mobile:text-[13px] text-[44px] flex items-center justify-center" onClick={() => flip(index)}>{item.card}</div> :
+          <div key={item.id} className="bg-blue-500 text-white rounded w-[200px] h-[200px] mobile:w-[50px] mobile:h-[50px] mobile:text-[13px]" onClick={() => flip(index)}></div>))
         )}
       </div>
     </div>
